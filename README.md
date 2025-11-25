@@ -52,9 +52,9 @@ private static final String PASS = "StrongPassword123"; // change to your MySQL 
 
 ---
 
-## 🧪 Run CLI test (locally)
+## **🧪 Run CLI test (locally)**
 
->Make sure MySQL is running and you executed sql/recipeshare_setup.sql (via MySQL Workbench or mysql CLI).
+**>Make sure MySQL is running and you executed sql/recipeshare_setup.sql (via MySQL Workbench or mysql CLI).**
 
 Build & run with Maven from project root:
 mvn clean package

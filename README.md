@@ -1,124 +1,60 @@
-🍽️ RecipeShare — Discover, Rate & Share Recipes
+# RecipeShare
 
-A modern backend-powered recipe sharing system built using
-Java + JDBC + MySQL + DAO Architecture.
+> A small Java CLI / JDBC starter project — MySQL schema, simple DAO, and a CLI test.  
+> Built for Review 1 (core Java, JDBC and project structure).
 
-🌟 Features
+---
 
-👤 User management (create & fetch users)
+## 🚀 Quick highlights
+- **User management** (create & fetch users)
+- **Recipe model** with fields
+- **MySQL database** with related tables (users, recipes, comments, ratings)
+- **JDBC connection** using a `DBConnection` helper
+- **DAO pattern** example (`UserDAO`)
+- **CLI test** — `AppTest` (mvn exec:java runs main)
+- Clean **Maven** project layout
 
-📘 Recipe model with fields
+---
 
-🗄️ MySQL database with multiple related tables
-
-🔌 JDBC connection with DAO pattern
-
-🧪 CLI tester using AppTest.java
-
-📁 Clean Maven-style folder structure
-
-📂 Project Directory Structure
-
+## 📁 Project structure
 RecipeShare/
-├── sql/
-│   └── recipeshare_setup.sql
-├── src/
-│   └── main/
-│       └── java/
-│           └── com/
-│               └── recipeshare/
-│                   ├── AppTest.java
-│                   ├── model/
-│                   │   ├── User.java
-│                   │   └── Recipe.java
-│                   └── dao/
-│                       ├── DBConnection.java
-│                       └── UserDAO.java
-└── pom.xml
-🗃️ Database Schema (MySQL)
+├─ sql/
+│ └─ recipeshare_setup.sql
+├─ src/
+│ └─ main/
+│ └─ java/
+│ └─ com/
+│ └─ recipeshare/
+│ ├─ AppTest.java
+│ ├─ model/
+│ │ ├─ User.java
+│ │ └─ Recipe.java
+│ └─ dao/
+│ ├─ DBConnection.java
+│ └─ UserDAO.java
+---
 
-The SQL script includes creation of:
+## 🧾 SQL (path)
+`sql/recipeshare_setup.sql` — creates the database, tables and initial user.
 
-Table	Purpose
-users	Stores user accounts
-recipes	Stores recipe data
-comments	Stores user comments
-ratings	Stores ratings for recipes
+---
 
-SQL file path:
+## ⚙️ DB Connection (what to set)
+Edit `DBConnection.java` if you change DB credentials:
 
-sql/recipeshare_setup.sql
+```java
+private static final String URL = "jdbc:mysql://localhost:3306/recipeshare?useSSL=false&serverTimezone=UTC";
+private static final String USER = "recipeshareuser";   // or "root" if you use root
+private static final String PASS = "StrongPassword123"; // change to your MySQL password
 
-🧱 Java Components Overview
-📦 Model Classes
-Class	Description
-User.java	Represents a system user
-Recipe.java	Represents a recipe posted by a user
-🔧 DAO Classes
-Class	Description
-DBConnection.java	Handles JDBC MySQL connection
-UserDAO.java	Performs CRUD operations on users
-🚀 Runner Class
-Class	Purpose
-AppTest.java	CLI test to insert + fetch a user
-🛠️ Tech Stack
-Layer	Technology
-Language	Java
-Database	MySQL
-Connectivity	JDBC
-Architecture	DAO Pattern
-Build Tool	Maven
-Version Control	GitHub
-▶️ How to Run the Project
-1️⃣ Setup MySQL Database
+├─ pom.xml
+└─ README.md
 
-In MySQL Workbench or CLI:
+🧪 Run CLI test (locally)
 
-SOURCE sql/recipeshare_setup.sql;
+Make sure MySQL is running and you executed sql/recipeshare_setup.sql (via MySQL Workbench or mysql CLI).
 
-2️⃣ Build the project
-
-Run:
-
+Build & run with Maven from project root:
 mvn clean package
-
-3️⃣ Execute AppTest.java
 mvn exec:java -Dexec.mainClass="com.recipeshare.AppTest"
-
-
-You will see:
-
-✔ A user being inserted
-✔ The same user loaded from database
-
-🚧 Future Enhancements
-
-User authentication system
-
-Full recipe CRUD
-
-Comments & rating logic
-
-Admin dashboard
-
-Servlet/JSP or GUI front-end
-
-Image upload support
-
-👥 Team Members
-Name	Email
-Tanmay Pathak	tanmay.24scse1011477@galgotiasuniversity.ac.in
-
-Ayush Bhatt	ayush.24scse1010031@galgotiasuniversity.ac.in
-
-Yushra Ubaid	yushra.24scse1010207@galgotiasuniversity.ac.in
-📘 Project Summary
-
-RecipeShare demonstrates practical skills in:
-
-✔ Java OOP
-✔ JDBC connectivity
-✔ DAO architecture
-✔ Modular coding
-✔ Real database operations
-✔ Clean project structuring
+(Or mvn exec:java if mainClass is in pom.xml.)

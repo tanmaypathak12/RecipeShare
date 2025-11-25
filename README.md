@@ -1,4 +1,4 @@
-# 🍽️ **RecipeShare — Java Web Application**
+# 🍽️ **RecipShare-Discober Rate & Share Recipes **
 
 **RecipeShare** is a simple and beginner-friendly **Java Web Application** built using  
 **Servlets, JSP, JDBC, and MySQL**.

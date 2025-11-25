@@ -215,7 +215,9 @@ This submission fulfills all Review-1 requirements:
 - JDBC connection ✔  
 - Test program ✔  
 - README + Documentation ✔
-  ##Demonstartion Photo
+
+  
+  ##**Demonstartion Photo**
 ![Image](https://github.com/user-attachments/assets/345d6d67-fbfa-4320-bcdc-43f369ea9262)
 
 

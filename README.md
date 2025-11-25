@@ -47,3 +47,102 @@ A working test file (`AppTest.java`) validates:
   ## 📁 **Project Structure**
 
 The project follows a clean and organized Java web-application layout:
+RecipeShare/
+├─ sql/
+│ └─ recipeshare_setup.sql
+├─ src/
+│ └─ main/
+│ └─ java/
+│ └─ com/
+│ └─ recipeshare/
+│ ├─ AppTest.java
+│ ├─ model/
+│ │ ├─ User.java
+│ │ └─ Recipe.java
+│ └─ dao/
+│ ├─ DBConnection.java
+│ └─ UserDAO.java
+---
+### 🧩 **Folder Explanation**
+- **sql/** → Contains database creation script  
+- **model/** → Java classes (POJO Models)  
+- **dao/** → Database access classes using JDBC  
+- **AppTest.java** → CLI test file to verify DB operations  
+- **pom.xml** → Maven configuration file
+  ## 🗄️ **Database Schema (MySQL)**
+
+The project uses a MySQL database named **`recipeshare`**, created using the SQL script:sql/recipeshare_setup.sql
+### 📌 **Tables Included**
+
+#### **1. users**
+Stores all users registered in the system.
+
+| Column       | Type             | Description                  |
+|--------------|------------------|------------------------------|
+| id           | INT (PK)         | Auto-increment user ID       |
+| name         | VARCHAR(100)     | User’s name                  |
+| email        | VARCHAR(150)     | Unique email                 |
+| password     | VARCHAR(255)     | User password                |
+| role         | VARCHAR(20)      | user/admin                   |
+| created_at   | TIMESTAMP        | Account creation time        |
+
+---
+
+#### **2. recipes**
+Stores the recipes shared by users.
+
+| Column        | Type         | Description                |
+|---------------|--------------|----------------------------|
+| id            | INT (PK)     | Recipe ID                  |
+| user_id       | INT (FK)     | Owner of the recipe        |
+| title         | VARCHAR(255) | Recipe title               |
+| ingredients   | TEXT         | Ingredients list           |
+| instructions  | TEXT         | Cooking steps              |
+| image_path    | VARCHAR(255) | (optional) Image location  |
+| created_at    | TIMESTAMP    | When recipe was posted     |
+
+---
+
+#### **3. comments**
+Stores comments on recipes.
+
+#### **4. ratings**
+Stores user ratings between 1 and 5.
+
+---
+
+### 🧩 **SQL Script Includes**
+- Creating all tables  
+- Creating MySQL user `recipeshareuser`  
+- Granting permissions  
+- Inserting sample admin user  
+## 🛠️ **Technologies Used**
+
+RecipeShare uses the following technologies:
+
+### 🧩 **Backend**
+- **Java (Core + OOP)**
+- **Servlets & JSP** *(Web Development — if extended for Review 2)*
+- **JDBC** (Java Database Connectivity)
+
+### 🗄️ **Database**
+- **MySQL**  
+- SQL script included for:
+  - Database creation  
+  - Tables creation  
+  - Sample admin user  
+
+### 🏗️ **Architecture**
+- **MVC (Model–View–Controller)**
+- **DAO (Data Access Object Pattern)**
+
+### 📦 **Build & Dependency Management**
+- **Apache Maven**
+  - MySQL Connector/J  
+  - Exec plugin for test execution
+
+### 🧰 **Development Tools**
+- **Git & GitHub**  
+- **MySQL Workbench**  
+- **VS Code / IntelliJ / Eclipse** (any supported IDE)
+  

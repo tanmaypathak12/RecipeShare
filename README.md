@@ -145,4 +145,77 @@ RecipeShare uses the following technologies:
 - **Git & GitHub**  
 - **MySQL Workbench**  
 - **VS Code / IntelliJ / Eclipse** (any supported IDE)
-  
+  ## ▶️ **How to Run the Project**
+
+Follow these steps to run the RecipeShare Java Web Application locally.
+
+---
+
+### ✅ **1. Install Prerequisites**
+
+Make sure these are installed on your system:
+
+- **Java 17+**
+- **Apache Maven**
+- **MySQL Server + Workbench**
+- **Any IDE (VS Code / IntelliJ / Eclipse)**
+
+Check versions:java -version mvn -version
+---
+
+### ✅ **2. Create the Database**
+
+Open **MySQL CLI** or **MySQL Workbench**, then run: SOURCE sql/recipeshare_setup.sql;
+This will:
+
+- Create database `recipeshare`
+- Create all tables
+- Insert sample admin user
+- Create MySQL user `recipeshareuser` with full privileges
+
+---
+
+### ✅ **3. Build the Project (Maven)**
+
+Open terminal inside the project folder:mvn clean package 
+This compiles all Java files and downloads required dependencies (like MySQL Connector/J).
+
+---
+
+### ✅ **4. Run the Test Program (AppTest.java)**
+
+To verify the database connection and UserDAO:mvn exec:java -Dexec.mainClass="com.recipeshare.AppTest
+If everything is correct, you will see:
+
+- A new user inserted into DB  
+- User details printed back from database  
+
+This confirms:
+
+✔ JDBC connection  
+✔ DAO functionality  
+✔ MySQL configuration  
+✔ Successful Review-1 setup  
+
+---
+## 🎯 **Conclusion**
+
+RecipeShare demonstrates core concepts of:
+
+- **Object-Oriented Programming (OOP)**
+- **JDBC + MySQL connectivity**
+- **DAO design pattern**
+- **Clean project structuring using Maven**
+- **Basic MVC architecture (extendable for Review-2)**
+
+This submission fulfills all Review-1 requirements:
+- Database schema ✔  
+- Java Model classes ✔  
+- DAO Layer ✔  
+- JDBC connection ✔  
+- Test program ✔  
+- README + Documentation ✔  
+
+
+
+

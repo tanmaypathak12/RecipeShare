@@ -60,3 +60,11 @@ Build & run with Maven from project root:
 mvn clean package
 mvn exec:java -Dexec.mainClass="com.recipeshare.AppTest"
 (Or mvn exec:java if mainClass is in pom.xml.)
+
+## 🔮 Future Enhancements
+- Add a web interface using Servlets/JSP or Spring Boot
+- Add session-based login
+- Add recipe image uploading
+- Add search & filter feature
+- Add admin panel for managing users
+

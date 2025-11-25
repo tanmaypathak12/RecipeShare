@@ -1,70 +1,49 @@
-# RecipeShare
+# 🍽️ **RecipeShare — Java Web Application**
 
-> A small Java CLI / JDBC starter project — MySQL schema, simple DAO, and a CLI test.  
-> Built for Review 1 (core Java, JDBC and project structure).
+**RecipeShare** is a simple and beginner-friendly **Java Web Application** built using  
+**Servlets, JSP, JDBC, and MySQL**.
 
----
+This project allows users to:
 
-## 🚀 Quick highlights
-- **User management** (create & fetch users)
-- **Recipe model** with fields
-- **MySQL database** with related tables (users, recipes, comments, ratings)
-- **JDBC connection** using a `DBConnection` helper
-- **DAO pattern** example (`UserDAO`)
-- **CLI test** — `AppTest` (mvn exec:java runs main)
-- Clean **Maven** project layout
+- **Add their own recipes**  
+- **View recipes added by others**  
+- **Store all data in a MySQL database**  
+- **Follow a clean MVC (Model–View–Controller) architecture**
 
----
+This project is designed to be **college-friendly, easy to understand**, and suitable for **Review-1 submission**.
+## ✨ **Features**
 
-## 📁 Project structure
-RecipeShare/
-├─ sql/
-│ └─ recipeshare_setup.sql
-├─ src/
-│ └─ main/
-│ └─ java/
-│ └─ com/
-│ └─ recipeshare/
-│ ├─ AppTest.java
-│ ├─ model/
-│ │ ├─ User.java
-│ │ └─ Recipe.java
-│ └─ dao/
-│ ├─ DBConnection.java
-│ └─ UserDAO.java
----
+RecipeShare includes the following basic features:
 
-## 🧾 SQL (path)
-`sql/recipeshare_setup.sql` — creates the database, tables and initial user.
+### 🧩 **1. Add Recipes**
+Users can submit recipes with:
+- Title  
+- Ingredients  
+- Instructions  
 
----
+All data is stored in MySQL using JDBC.
 
-## ⚙️ DB Connection (what to set)
-Edit `DBConnection.java` if you change DB credentials:
+### 📖 **2. View Recipes**
+Users can view:
+- All recipes stored in the database  
+- Their own recipes (optional extension)
 
-```java
-private static final String URL = "jdbc:mysql://localhost:3306/recipeshare?useSSL=false&serverTimezone=UTC";
-private static final String USER = "recipeshareuser";   // or "root" if you use root
-private static final String PASS = "StrongPassword123"; // change to your MySQL password
+### 🗂️ **3. Clean MVC Structure**
+- **Model:** Java classes (User, Recipe)
+- **View:** JSP pages  
+- **Controller:** Java Servlets  
+- **Database:** MySQL with JDBC connectivity  
 
-├─ pom.xml
-└─ README.md
+### 🔗 **4. Database Connectivity**
+Fully working JDBC connection using:
+- `DBConnection.java`  
+- DAO classes for clean data access  
 
----
+### 🧪 **5. Simple Working Demo**
+A working test file (`AppTest.java`) validates:
+- Database connection  
+- User creation  
+- Data retrieval
+  ## 📁 **Project Structure**
 
-## **🧪 Run CLI test (locally)**
-
-**>Make sure MySQL is running and you executed sql/recipeshare_setup.sql (via MySQL Workbench or mysql CLI).**
-
-Build & run with Maven from project root:
-mvn clean package
-mvn exec:java -Dexec.mainClass="com.recipeshare.AppTest"
-(Or mvn exec:java if mainClass is in pom.xml.)
-
-## 🔮 Future Enhancements
-- Add a web interface using Servlets/JSP or Spring Boot
-- Add session-based login
-- Add recipe image uploading
-- Add search & filter feature
-- Add admin panel for managing users
-
+The project follows a clean and organized Java web-application layout:

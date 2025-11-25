@@ -49,8 +49,8 @@ private static final String PASS = "StrongPassword123"; // change to your MySQL 
 
 ├─ pom.xml
 └─ README.md
-
-##🧪 Run CLI test (locally)
+---
+## 🧪 Run CLI test (locally)
 
 Make sure MySQL is running and you executed sql/recipeshare_setup.sql (via MySQL Workbench or mysql CLI).
 

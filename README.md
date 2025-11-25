@@ -1,27 +1,24 @@
 🍽️ RecipeShare — Discover, Rate & Share Recipes
 
-An online recipe-sharing platform built using Java, MySQL, and the DAO + JDBC architecture.
-Users can share recipes, rate them, and explore content posted by others.
+A modern backend-powered recipe sharing system built using
+Java + JDBC + MySQL + DAO Architecture.
 
-📌 Overview
+🌟 Features
 
-RecipeShare is a backend-focused Java application demonstrating:
+👤 User management (create & fetch users)
 
-Java OOP design
+📘 Recipe model with fields
 
-JDBC connectivity
+🗄️ MySQL database with multiple related tables
 
-DAO (Data Access Object) architecture
+🔌 JDBC connection with DAO pattern
 
-MySQL relational database
+🧪 CLI tester using AppTest.java
 
-Clean and modular project structure
+📁 Clean Maven-style folder structure
 
-CRUD operations for users and recipes
+📂 Project Directory Structure
 
-The goal is to simulate the backend logic of a real-world recipe platform.
-
-🧱 Project Structure
 RecipeShare/
 ├── sql/
 │   └── recipeshare_setup.sql
@@ -38,87 +35,90 @@ RecipeShare/
 │                       ├── DBConnection.java
 │                       └── UserDAO.java
 └── pom.xml
+🗃️ Database Schema (MySQL)
 
-🗄️ Database Schema
+The SQL script includes creation of:
 
-The database includes:
+Table	Purpose
+users	Stores user accounts
+recipes	Stores recipe data
+comments	Stores user comments
+ratings	Stores ratings for recipes
 
-users — stores user accounts
-
-recipes — stores recipes
-
-comments — stores comments on recipes
-
-ratings — stores ratings for recipes
-
-All tables and relations are defined in:
+SQL file path:
 
 sql/recipeshare_setup.sql
 
-🧪 Java Components
-Models
-File	Description
-User.java	Represents a user entity
-Recipe.java	Represents a recipe entity
-DAO Layer
-File	Description
-DBConnection.java	Manages MySQL connection using JDBC
+🧱 Java Components Overview
+📦 Model Classes
+Class	Description
+User.java	Represents a system user
+Recipe.java	Represents a recipe posted by a user
+🔧 DAO Classes
+Class	Description
+DBConnection.java	Handles JDBC MySQL connection
 UserDAO.java	Performs CRUD operations on users
-Runner
-File	Description
-AppTest.java	Simple CLI runner to test DB operations
-🛠️ Technologies Used
+🚀 Runner Class
+Class	Purpose
+AppTest.java	CLI test to insert + fetch a user
+🛠️ Tech Stack
+Layer	Technology
+Language	Java
+Database	MySQL
+Connectivity	JDBC
+Architecture	DAO Pattern
+Build Tool	Maven
+Version Control	GitHub
+▶️ How to Run the Project
+1️⃣ Setup MySQL Database
 
-Java
-
-MySQL
-
-JDBC
-
-Maven
-
-DAO Pattern
-
-Git & GitHub
-
-▶️ Running the Project
-1. Build the database
-
-Use MySQL Workbench or terminal:
+In MySQL Workbench or CLI:
 
 SOURCE sql/recipeshare_setup.sql;
 
-2. Build using Maven
+2️⃣ Build the project
+
+Run:
+
 mvn clean package
 
-3. Run the AppTest class
+3️⃣ Execute AppTest.java
 mvn exec:java -Dexec.mainClass="com.recipeshare.AppTest"
 
 
-This will insert and fetch sample user data.
+You will see:
 
-⭐ Future Enhancements
+✔ A user being inserted
+✔ The same user loaded from database
 
-User authentication
+🚧 Future Enhancements
 
-Recipe CRUD operations
+User authentication system
 
-Comments & ratings module
+Full recipe CRUD
+
+Comments & rating logic
 
 Admin dashboard
 
-Web frontend (Servlets/JSP) or GUI
+Servlet/JSP or GUI front-end
 
 Image upload support
 
-👥 Team
+👥 Team Members
 Name	Email
 Tanmay Pathak	tanmay.24scse1011477@galgotiasuniversity.ac.in
 
 Ayush Bhatt	ayush.24scse1010031@galgotiasuniversity.ac.in
 
 Yushra Ubaid	yushra.24scse1010207@galgotiasuniversity.ac.in
-👨‍💻 Author Message
+📘 Project Summary
 
-This project showcases backend development skills using Java, JDBC, MySQL, and clean architectural patterns.
-It is designed to be extendable for a full-stack application in future.
+RecipeShare demonstrates practical skills in:
+
+✔ Java OOP
+✔ JDBC connectivity
+✔ DAO architecture
+✔ Modular coding
+✔ Real database operations
+✔ Clean project structuring

@@ -47,21 +47,7 @@ A working test file (`AppTest.java`) validates:
   ## 📁 **Project Structure**
 
 The project follows a clean and organized Java web-application layout:
-RecipeShare/
-├─ sql/
-│ └─ recipeshare_setup.sql
-├─ src/
-│ └─ main/
-│ └─ java/
-│ └─ com/
-│ └─ recipeshare/
-│ ├─ AppTest.java
-│ ├─ model/
-│ │ ├─ User.java
-│ │ └─ Recipe.java
-│ └─ dao/
-│ ├─ DBConnection.java
-│ └─ UserDAO.java
+<img width="243" height="305" alt="Image" src="https://github.com/user-attachments/assets/6b39bb7a-2502-4bc6-b8f2-f48b51179df1" />
 ---
 ### 🧩 **Folder Explanation**
 - **sql/** → Contains database creation script  

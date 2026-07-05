@@ -186,7 +186,7 @@ This confirms:
 ---
 ## 🎯 **Conclusion**
 
-RecipeShare demonstrates core concepts of:
+RecipeShare demonstrates core concepts of::
 
 - **Object-Oriented Programming (OOP)**
 - **JDBC + MySQL connectivity**

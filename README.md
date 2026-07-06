@@ -200,7 +200,7 @@ This submission fulfills all Review-1 requirements:
 - DAO Layer ✔  
 - JDBC connection ✔  
 - Test program ✔  
-- README + Documentation ✔
+- README + Documentation ✔.
 
   
   ##**Demonstartion Photo**
